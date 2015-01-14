@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteRule .* - [E=HTTP_CONTENT_TYPE:%{HTTP:Content-Type}]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php

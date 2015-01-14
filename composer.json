@@ -1,0 +1,30 @@
+{
+    "name": "zephir/luya-kickstarter",
+    "description": "The kickstarter for a new luya project.",
+    "type": "project",
+    "license":"MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "zephir/luya" : "*",
+        "zephir/luya-module-cms" : "*",
+        "zephir/luya-module-cmsadmin" : "*",
+        "zephir/luya-module-admin" : "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "application/assets": "0777"
+                }
+            ]
+        }
+    } 
+}

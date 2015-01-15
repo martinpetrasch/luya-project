@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "34a9571bd3cb0b02b067ccdc9ce63a35",
+    "hash": "02fafb57e9dab72e2a54cf7da7680528",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -266,17 +266,74 @@
             "time": "2013-11-30 08:25:19"
         },
         {
+            "name": "twig/twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "e999532003d54534c0a66aa572289ad07195a14f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e999532003d54534c0a66aa572289ad07195a14f",
+                "reference": "e999532003d54534c0a66aa572289ad07195a14f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-01-14 10:18:41"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "7f37de176b429af0ee3712cf30d13dc2f1ebac75"
+                "reference": "4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7f37de176b429af0ee3712cf30d13dc2f1ebac75",
-                "reference": "7f37de176b429af0ee3712cf30d13dc2f1ebac75",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d",
+                "reference": "4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d",
                 "shasum": ""
             },
             "require": {
@@ -352,7 +409,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-01-14 02:28:13"
+            "time": "2015-01-15 03:18:05"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -400,134 +457,6 @@
                 "yii2"
             ],
             "time": "2015-01-11 03:59:50"
-        },
-        {
-            "name": "zephir/luya",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zephir/luya.git",
-                "reference": "cc1ba55948727d2377b2b7be98a563eff6f2a0cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zephir/luya/zipball/cc1ba55948727d2377b2b7be98a563eff6f2a0cb",
-                "reference": "cc1ba55948727d2377b2b7be98a563eff6f2a0cb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "2.0.*"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "@stable",
-                "phpunit/phpunit": "@stable"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "luya\\": "src/",
-                    "admin\\": "modules/admin",
-                    "cms\\": "modules/cms",
-                    "cmsadmin\\": "modules/cmsadmin"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "nadar",
-                    "homepage": "https://github.com/nadar",
-                    "role": "Creator"
-                }
-            ],
-            "description": "Zephir Luya Library",
-            "homepage": "https://github.com/zephir/luya",
-            "keywords": [
-                "php",
-                "yii2"
-            ],
-            "time": "2015-01-14 15:03:56"
-        },
-        {
-            "name": "zephir/luya-module-admin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zephir/luya-module-admin.git",
-                "reference": "7c39cde072cf84da9313a059e6ca4399d21a6393"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zephir/luya-module-admin/zipball/7c39cde072cf84da9313a059e6ca4399d21a6393",
-                "reference": "7c39cde072cf84da9313a059e6ca4399d21a6393",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "admin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Zephir Luya Admin",
-            "time": "2015-01-14 15:03:56"
-        },
-        {
-            "name": "zephir/luya-module-cms",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zephir/luya-module-cms.git",
-                "reference": "702319267152db287d53dc9345cdef84a7e6dcc3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zephir/luya-module-cms/zipball/702319267152db287d53dc9345cdef84a7e6dcc3",
-                "reference": "702319267152db287d53dc9345cdef84a7e6dcc3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "cms\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Zephir Luya Cms",
-            "time": "2015-01-14 15:03:56"
-        },
-        {
-            "name": "zephir/luya-module-cmsadmin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zephir/luya-module-cmsadmin.git",
-                "reference": "e5b7a8246a3b3d86b37dcd5011340e61d6d82a87"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zephir/luya-module-cmsadmin/zipball/e5b7a8246a3b3d86b37dcd5011340e61d6d82a87",
-                "reference": "e5b7a8246a3b3d86b37dcd5011340e61d6d82a87",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "cmsadmin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Zephir Luya Cmsadmin",
-            "time": "2015-01-14 15:03:56"
         }
     ],
     "packages-dev": [],

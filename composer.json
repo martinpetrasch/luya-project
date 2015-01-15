@@ -5,10 +5,8 @@
     "license":"MIT",
     "minimum-stability": "dev",
     "require": {
-        "zephir/luya" : "*",
-        "zephir/luya-module-cms" : "*",
-        "zephir/luya-module-cmsadmin" : "*",
-        "zephir/luya-module-admin" : "*"
+        "yiisoft/yii2": "2.0.*",
+        		"twig/twig" : "1.*"
     },
     "config": {
         "process-timeout": 1800
@@ -26,5 +24,13 @@
                 }
             ]
         }
-    } 
+    },
+	"autoload" : {
+		"psr-4" : {
+			"luya\\" : "../luya/src/",
+			"admin\\" : "../luya/modules/admin",
+			"cms\\" : "../luya/modules/cms",
+			"cmsadmin\\" : "../luya/modules/cmsadmin"
+		}
+	}
 }

@@ -3,19 +3,21 @@
     use \app\Asset;
     Asset::register($this);
 
+    $lang = yii::$app->collection->lang;
+    /*
     $menu = new \cmsadmin\components\Menu();
     $menu->setCatByRewrite('default');
     $menu->setLangByShortCode(Yii::$app->get('collection')->lang->shortCode);
     $nav = $menu->childrenRecursive(0, '__sub');
-
+    */
     // get collection link sahring
-    //$links = Yii::$app->get('collection')->getLinks();
+    $links = Yii::$app->collection->links->getAll();
 
 ?>
 <html>
     <head>
         <title>Luya-Demo-Webseite <?= yii::$app->get('collection')->page->title; ?></title>
-        <base href="http://localhost/luya-website/application/" />
+        <base href="<?= \yii\helpers\Url::base(true); ?>/" />
         <?php $this->head() ?>
     </head>
     <body>
@@ -28,18 +30,11 @@
                 <div class="col-md-3">
                     <div id="nav">
                         <ul>
-                            <?php foreach ($nav as $item): $sub = (isset($item['__sub'])) ? $item['__sub'] : []; ?>
-                                <li>
-                                    <a href="de/<?= $item['rewrite']; ?>"><?= $item['title']; ?></a>
-                                    <ul>
-                                    <?php foreach ($sub as $subItem): $subsub = (isset($subItem['__sub'])) ? $item['__sub'] : []; ?>
-                                        <li>
-                                            <a href="de/<?= $item['rewrite']; ?>/<?= $subItem['rewrite']; ?>"><?= $subItem['title']; ?></a>
-                                        </li>
-                                    <?php endforeach; ?>
-                                    </ul>
-                                </li>
-                            <?php endforeach; ?>
+                            <? foreach($links as $item): ?>
+                                <ul>
+                                    <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a><br /><small><?= $item['url'];?></small></li>
+                                </ul>
+                            <? endforeach; ?>
                         </ul>
                     </div>
                 </div>

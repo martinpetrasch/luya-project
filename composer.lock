@@ -4,27 +4,219 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "02fafb57e9dab72e2a54cf7da7680528",
+    "hash": "1cc24d34d9b6536c692a1340cfabf63a",
     "packages": [
         {
-            "name": "bower-asset/jquery",
-            "version": "2.1.3",
+            "name": "bower-asset/ace-builds",
+            "version": "v1.1.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery.git",
-                "reference": "8f2a9d9272d6ed7f32d3a484740ab342c02541e0"
+                "url": "https://github.com/ajaxorg/ace-builds.git",
+                "reference": "7fafd126c2d26bdec899274eb5c2080c7a081d47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery/zipball/8f2a9d9272d6ed7f32d3a484740ab342c02541e0",
-                "reference": "8f2a9d9272d6ed7f32d3a484740ab342c02541e0",
+                "url": "https://api.github.com/repos/ajaxorg/ace-builds/zipball/7fafd126c2d26bdec899274eb5c2080c7a081d47",
+                "reference": "7fafd126c2d26bdec899274eb5c2080c7a081d47",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/angular",
+            "version": "v1.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular.git",
+                "reference": "ecf0435da949836c63ebf048ea8b7710542e33ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/ecf0435da949836c63ebf048ea8b7710542e33ce",
+                "reference": "ecf0435da949836c63ebf048ea8b7710542e33ce",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-dragdrop",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codef0rmer/angular-dragdrop.git",
+                "reference": "604d8053355ad7ca54135188fa6b12826ce7a643"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codef0rmer/angular-dragdrop/zipball/604d8053355ad7ca54135188fa6b12826ce7a643",
+                "reference": "604d8053355ad7ca54135188fa6b12826ce7a643",
+                "shasum": ""
+            },
+            "require-dev": {
+                "bower-asset/angular": "dev->=1.0,<1.1",
+                "bower-asset/angular-mocks": "dev->=1.0,<1.1",
+                "bower-asset/angular-ui-bootstrap-bower": ">=0.12.0,<0.13",
+                "bower-asset/jquery": "dev-2.x|2.x",
+                "bower-asset/jquery-ui": "dev-latest"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./src/angular-dragdrop.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "components",
+                    "test*",
+                    "demo*",
+                    "gruntFile.js",
+                    "package.json"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "This directive allows you to use jQuery UI's draggable and droppable plugins with AngularJS."
+        },
+        {
+            "name": "bower-asset/angular-loading-bar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chieffancypants/angular-loading-bar.git",
+                "reference": "3231cd9855b2eded204d1d784f2daf95cd1902f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chieffancypants/angular-loading-bar/zipball/3231cd9855b2eded204d1d784f2daf95cd1902f3",
+                "reference": "3231cd9855b2eded204d1d784f2daf95cd1902f3",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": ">=1.2.9,<2.0"
+            },
+            "require-dev": {
+                "bower-asset/angular": ">=1.2.23,<1.3",
+                "bower-asset/angular-1.3": "1.3",
+                "bower-asset/angular-animate": ">=1.2.9,<1.3",
+                "bower-asset/angular-animate-1.3": "1.3",
+                "bower-asset/angular-mocks": ">=1.2.9,<1.3",
+                "bower-asset/angular-mocks-1.3": "1.3"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "build/loading-bar.js",
+                    "build/loading-bar.css"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "components",
+                    "test",
+                    "example"
+                ]
+            },
+            "time": "2014-11-04 00:58:49"
+        },
+        {
+            "name": "bower-asset/angular-resource",
+            "version": "v1.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-resource.git",
+                "reference": "6364e8feb985d5fb0016c7eafa5bbfa5e722fb9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/6364e8feb985d5fb0016c7eafa5bbfa5e722fb9a",
+                "reference": "6364e8feb985d5fb0016c7eafa5bbfa5e722fb9a",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.3.10"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-resource.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-ui-ace",
+            "version": "v0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular-ui/ui-ace.git",
+                "reference": "5e806661a4b42dba444e8c8d52150ac93f066aa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular-ui/ui-ace/zipball/5e806661a4b42dba444e8c8d52150ac93f066aa1",
+                "reference": "5e806661a4b42dba444e8c8d52150ac93f066aa1",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
+        {
+            "name": "bower-asset/angular-ui-router",
+            "version": "0.2.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular-ui/ui-router.git",
+                "reference": "c3d543aae43d4600512520a0d70723ac31f2cb62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular-ui/ui-router/zipball/c3d543aae43d4600512520a0d70723ac31f2cb62",
+                "reference": "c3d543aae43d4600512520a0d70723ac31f2cb62",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": ">=1.0.8"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./release/angular-ui-router.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "component.json",
+                    "package.json",
+                    "lib",
+                    "config",
+                    "sample",
+                    "test",
+                    "tests",
+                    "ngdoc_assets",
+                    "Gruntfile.js",
+                    "files.js"
+                ]
+            }
+        },
+        {
+            "name": "bower-asset/jquery",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery.git",
+                "reference": "4dec426aa2a6cbabb1b064319ba7c272d594a688"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery/zipball/4dec426aa2a6cbabb1b064319ba7c272d594a688",
+                "reference": "4dec426aa2a6cbabb1b064319ba7c272d594a688",
                 "shasum": ""
             },
             "require-dev": {
                 "bower-asset/qunit": "1.14.0",
                 "bower-asset/requirejs": "2.1.10",
                 "bower-asset/sinon": "1.8.1",
-                "bower-asset/sizzle": "2.1.1-patch2"
+                "bower-asset/sizzle": "1.10.19"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -50,17 +242,43 @@
             ]
         },
         {
-            "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.56",
+            "name": "bower-asset/jquery-ui",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "4551607fef63fd4bcd675479a8c347b668b915eb"
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "396781474d936959061271505f506b78398fe6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/4551607fef63fd4bcd675479a8c347b668b915eb",
-                "reference": "4551607fef63fd4bcd675479a8c347b668b915eb",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/396781474d936959061271505f506b78398fe6a2",
+                "reference": "396781474d936959061271505f506b78398fe6a2",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "jquery-ui.js"
+                ],
+                "bower-asset-ignore": []
+            },
+            "time": "2014-10-17 06:40:12"
+        },
+        {
+            "name": "bower-asset/jquery.inputmask",
+            "version": "3.1.57",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
+                "reference": "d180082aa1ba98c85f85b2c4eebbfa195fd25613"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/d180082aa1ba98c85f85b2c4eebbfa195fd25613",
+                "reference": "d180082aa1ba98c85f85b2c4eebbfa195fd25613",
                 "shasum": ""
             },
             "require": {
@@ -271,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e999532003d54534c0a66aa572289ad07195a14f"
+                "reference": "b9e3e6c51a1c77b087bd7a283c4d89872f160c49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e999532003d54534c0a66aa572289ad07195a14f",
-                "reference": "e999532003d54534c0a66aa572289ad07195a14f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b9e3e6c51a1c77b087bd7a283c4d89872f160c49",
+                "reference": "b9e3e6c51a1c77b087bd7a283c4d89872f160c49",
                 "shasum": ""
             },
             "require": {
@@ -285,7 +503,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
                 }
             },
             "autoload": {
@@ -320,7 +538,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-14 10:18:41"
+            "time": "2015-01-20 23:28:53"
         },
         {
             "name": "yiisoft/yii2",
@@ -328,12 +546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d"
+                "reference": "179b88d375563814284ae90a1c4f6acc33cf8152"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d",
-                "reference": "4eb4c4334d46f13a8e95c86d587a44e6c2f68c7d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/179b88d375563814284ae90a1c4f6acc33cf8152",
+                "reference": "179b88d375563814284ae90a1c4f6acc33cf8152",
                 "shasum": ""
             },
             "require": {
@@ -409,7 +627,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-01-15 03:18:05"
+            "time": "2015-01-20 06:36:25"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -462,7 +680,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "bower-asset/angular-loading-bar": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -1,0 +1,1 @@
+<h1>Der Warenkorb Template</h1>

@@ -12,3 +12,4 @@ composer.phar
 
 # project config
 /config/local.php
+/runtime/

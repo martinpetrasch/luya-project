@@ -4,15 +4,6 @@
     Asset::register($this);
 
     $lang = yii::$app->collection->lang;
-    /*
-    $menu = new \cmsadmin\components\Menu();
-    $menu->setCatByRewrite('default');
-    $menu->setLangByShortCode(Yii::$app->get('collection')->lang->shortCode);
-    $nav = $menu->childrenRecursive(0, '__sub');
-    */
-    // get collection link sahring
-    $links = Yii::$app->collection->links->getAll();
-
 ?>
 <html>
     <head>
@@ -29,11 +20,16 @@
             <div class="row">
                 <div class="col-md-3">
                     <div id="nav">
+                        <h5>Cat: default, Lang: <?= $lang->shortCode; ?></h5>
                         <ul>
-                            <? foreach($links as $item): ?>
-                                <ul>
-                                    <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a><br /><small><?= $item['url'];?></small></li>
-                                </ul>
+                            <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => 0]) as $item): ?>
+                                <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
+                                    <ul>
+                                        <? foreach(Yii::$app->collection->links->getByArguments(['lang' => $lang->shortCode, 'parent_nav_id' => $item['id']]) as $subItem): ?>
+                                        <li><a href="<?= $lang->shortCode; ?>/<?=$subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
+                                        <? endforeach; ?>
+                                    </ul>
+                                </li>
                             <? endforeach; ?>
                         </ul>
                     </div>

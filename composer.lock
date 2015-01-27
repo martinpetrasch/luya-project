@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56e2ded2bda59cb723ca89430c6fb241",
+    "hash": "ed702ef2076576c1951b6d6c8b61176f",
     "packages": [
         {
             "name": "bower-asset/ace-builds",
@@ -44,24 +44,25 @@
         },
         {
             "name": "bower-asset/angular-dragdrop",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codef0rmer/angular-dragdrop.git",
-                "reference": "604d8053355ad7ca54135188fa6b12826ce7a643"
+                "reference": "59e5889ce3af27d3c236c3b0bc107ac5ae9fdd9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codef0rmer/angular-dragdrop/zipball/604d8053355ad7ca54135188fa6b12826ce7a643",
-                "reference": "604d8053355ad7ca54135188fa6b12826ce7a643",
+                "url": "https://api.github.com/repos/codef0rmer/angular-dragdrop/zipball/59e5889ce3af27d3c236c3b0bc107ac5ae9fdd9d",
+                "reference": "59e5889ce3af27d3c236c3b0bc107ac5ae9fdd9d",
                 "shasum": ""
             },
+            "require": {
+                "bower-asset/angular": "~1.0",
+                "bower-asset/jquery-ui": "dev-default|*"
+            },
             "require-dev": {
-                "bower-asset/angular": "dev->=1.0,<1.1",
-                "bower-asset/angular-mocks": "dev->=1.0,<1.1",
-                "bower-asset/angular-ui-bootstrap-bower": ">=0.12.0,<0.13",
-                "bower-asset/jquery": "dev-2.x|2.x",
-                "bower-asset/jquery-ui": "dev-latest"
+                "bower-asset/angular-mocks": "~1.0",
+                "bower-asset/angular-ui-bootstrap-bower": "~0.12.0"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -96,11 +97,11 @@
                 "shasum": ""
             },
             "require-dev": {
-                "bower-asset/angular": ">=1.2.9,<2.0",
+                "bower-asset/angular": ">=1.2.9,<2.0.0",
                 "bower-asset/angular-1.3": "1.3",
-                "bower-asset/angular-animate": ">=1.2.9,<2.0",
+                "bower-asset/angular-animate": ">=1.2.9,<2.0.0",
                 "bower-asset/angular-animate-1.3": "1.3",
-                "bower-asset/angular-mocks": ">=1.2.9,<2.0",
+                "bower-asset/angular-mocks": ">=1.2.9,<2.0.0",
                 "bower-asset/angular-mocks-1.3": "1.3"
             },
             "type": "bower-asset-library",
@@ -143,19 +144,28 @@
         },
         {
             "name": "bower-asset/angular-ui-ace",
-            "version": "v0.0.3",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular-ui/ui-ace.git",
-                "reference": "5e806661a4b42dba444e8c8d52150ac93f066aa1"
+                "reference": "5967f81134c311ee20cfec136db3835b19dd5037"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular-ui/ui-ace/zipball/5e806661a4b42dba444e8c8d52150ac93f066aa1",
-                "reference": "5e806661a4b42dba444e8c8d52150ac93f066aa1",
+                "url": "https://api.github.com/repos/angular-ui/ui-ace/zipball/5967f81134c311ee20cfec136db3835b19dd5037",
+                "reference": "5967f81134c311ee20cfec136db3835b19dd5037",
                 "shasum": ""
             },
-            "type": "bower-asset-library"
+            "require": {
+                "bower-asset/ace-builds": ">=1.0.0,<2.0.0",
+                "bower-asset/angular": "~1.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "./ui-ace.js"
+                ]
+            }
         },
         {
             "name": "bower-asset/angular-ui-router",
@@ -343,6 +353,46 @@
             }
         },
         {
+            "name": "bower-asset/twig.js",
+            "version": "0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justjohn/twig.js.git",
+                "reference": "551d31426b7375fa3bb392ebb28beaa29125abcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justjohn/twig.js/zipball/551d31426b7375fa3bb392ebb28beaa29125abcf",
+                "reference": "551d31426b7375fa3bb392ebb28beaa29125abcf",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "twig.min.js",
+                "bower-asset-ignore": [
+                    "Makefile",
+                    "src",
+                    "demos",
+                    "bin",
+                    "lib",
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "test-ext"
+                ]
+            },
+            "license": [
+                "BSD 2-Clause"
+            ],
+            "description": "JS implementation of the Twig templating language.",
+            "keywords": [
+                "engine",
+                "template",
+                "twig"
+            ]
+        },
+        {
             "name": "bower-asset/yii2-pjax",
             "version": "dev-master",
             "source": {
@@ -369,12 +419,14 @@
                     "vendor/",
                     "script/",
                     "test/"
-                ]
+                ],
+                "branch-alias": {
+                    "dev-master": "2.0.2-dev"
+                }
             },
             "license": [
                 "MIT"
-            ],
-            "time": "2015-01-22 20:06:42"
+            ]
         },
         {
             "name": "cebe/markdown",
@@ -483,16 +535,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "dev-master",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "6b434f4521e74bb5022e7e9e441189356fea137b"
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/6b434f4521e74bb5022e7e9e441189356fea137b",
-                "reference": "6b434f4521e74bb5022e7e9e441189356fea137b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
                 "shasum": ""
             },
             "require": {
@@ -536,20 +588,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-25 17:35:14"
+            "time": "2015-01-25 17:32:08"
         },
         {
             "name": "yiisoft/yii2",
-            "version": "dev-master",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "561097bf9a87eb0d917cc24837070a233bdce009"
+                "reference": "a0bb60febe1e886d7c45ab3a70e17a3b3149f1a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/561097bf9a87eb0d917cc24837070a233bdce009",
-                "reference": "561097bf9a87eb0d917cc24837070a233bdce009",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/a0bb60febe1e886d7c45ab3a70e17a3b3149f1a3",
+                "reference": "a0bb60febe1e886d7c45ab3a70e17a3b3149f1a3",
                 "shasum": ""
             },
             "require": {
@@ -625,7 +677,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-01-26 01:09:31"
+            "time": "2015-01-11 03:57:55"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -678,7 +730,20 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "yiisoft/yii2": 0,
+        "twig/twig": 0,
+        "bower-asset/jquery": 0,
+        "bower-asset/jquery-ui": 0,
+        "bower-asset/angular": 0,
+        "bower-asset/angular-resource": 0,
+        "bower-asset/angular-ui-router": 0,
+        "bower-asset/angular-loading-bar": 0,
+        "bower-asset/angular-ui-ace": 0,
+        "bower-asset/angular-dragdrop": 0,
+        "bower-asset/ace-builds": 0,
+        "bower-asset/twig.js": 0
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -6,6 +6,7 @@
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "2.0.*@stable",
+        "yiisoft/yii2-debug" : "2.0.*@stable",
         "twig/twig" : "1.*@stable",
         "bower-asset/jquery" : "2.1.*@stable",
         "bower-asset/jquery-ui" : "1.*@stable",
@@ -17,6 +18,7 @@
         "bower-asset/angular-dragdrop" : "1.*@stable",
         "bower-asset/ace-builds" : "1.1.8@stable",
         "bower-asset/twig.js" : "0.7.2@stable"
+        
     },
     "config": {
         "process-timeout": 1800

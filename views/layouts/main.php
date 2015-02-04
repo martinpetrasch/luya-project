@@ -4,15 +4,24 @@
     Asset::register($this);
 
     $lang = yii::$app->collection->lang;
+
+    $links = \yii::$app->collection->links;
+    
+    $first = \luya\helpers\Menu::parentNavIdByCurrentLink($links, 1);
+    $second = \luya\helpers\Menu::parentNavIdByCurrentLink($links, 2);
+    $third = \luya\helpers\Menu::parentNavIdByCurrentLink($links, 3);
+    
 ?>
 <html>
     <head>
-        <title>Luya-Demo-Webseite <?= yii::$app->get('collection')->page->title; ?></title>
+        <title>Luya-Demo-Webseite // <?= $this->context->pageTitle; ?></title>
         <base href="<?= \yii\helpers\Url::base(true); ?>/" />
         <?php $this->head() ?>
     </head>
     <body>
     <?php $this->beginBody() ?>
+    
+    
         <div class="container">
             <div id="teaser">LUYA</div>
         </div>
@@ -20,13 +29,43 @@
             <div class="row">
                 <div class="col-md-3">
                     <div id="nav">
-                        <h5>Cat: default, Lang: <?= $lang->shortCode; ?></h5>
+                        <h3>Splitted Navgation</h3>
+                        <h4>Depth 1</h4>
                         <ul>
-                            <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => 0]) as $item): ?>
+                            <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => $first]) as $item): ?>
+                                <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                            <? endforeach; ?>
+                        </ul>
+                        SECOND
+                        <ul>
+                            <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => $second]) as $item): ?>
+                                <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                            <? endforeach; ?>
+                            
+                        </ul>
+                        THIRD
+                         <ul>
+                            <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => $third]) as $item): ?>
+                                <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                            <? endforeach; ?>
+                            
+                        </ul>
+                         <br /><br />
+                        <h3>Navigation</h3>
+                        
+                        <ul>
+                        <? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => 0]) as $item): ?>
                                 <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
                                     <ul>
                                         <? foreach(Yii::$app->collection->links->getByArguments(['lang' => $lang->shortCode, 'parent_nav_id' => $item['id']]) as $subItem): ?>
                                         <li><a href="<?= $lang->shortCode; ?>/<?=$subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
+                                        
+                                        <ul>
+                                            <? foreach(Yii::$app->collection->links->getByArguments(['lang' => $lang->shortCode, 'parent_nav_id' => $subItem['id']]) as $subSubItem): ?>
+                                            <li><a href="<?= $lang->shortCode; ?>/<?=$subSubItem['url'];?>"><?= $subSubItem['title']?></a> <small>(<?= $subSubItem['url'];?>)</small>
+                                            <? endforeach; ?>
+                                        </ul>
+                                        
                                         <? endforeach; ?>
                                     </ul>
                                 </li>
@@ -59,3 +98,15 @@
     </body>
 </html>
 <?php $this->endPage() ?>
+<? /*
+<? foreach(Yii::$app->collection->links->getByArguments(['cat' => 'default', 'lang' => $lang->shortCode, 'parent_nav_id' => 0]) as $item): ?>
+        <li><a href="<?= $lang->shortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
+            <ul>
+                <? foreach(Yii::$app->collection->links->getByArguments(['lang' => $lang->shortCode, 'parent_nav_id' => $item['id']]) as $subItem): ?>
+                <li><a href="<?= $lang->shortCode; ?>/<?=$subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
+                <? endforeach; ?>
+            </ul>
+        </li>
+    <? endforeach; ?>
+*/
+?>

@@ -325,16 +325,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.58",
+            "version": "3.1.60",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "8579f56b86f78accbaf03c28d44be35ca1e346a5"
+                "reference": "da0a365b45b3040219a83c5abb5fcd3a51d7ed89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/8579f56b86f78accbaf03c28d44be35ca1e346a5",
-                "reference": "8579f56b86f78accbaf03c28d44be35ca1e346a5",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/da0a365b45b3040219a83c5abb5fcd3a51d7ed89",
+                "reference": "da0a365b45b3040219a83c5abb5fcd3a51d7ed89",
                 "shasum": ""
             },
             "require": {
@@ -477,7 +477,8 @@
             },
             "license": [
                 "MIT"
-            ]
+            ],
+            "time": "2015-01-22 20:06:42"
         },
         {
             "name": "cebe/markdown",
@@ -573,8 +574,7 @@
                 {
                     "name": "Edward Z. Yang",
                     "email": "admin@htmlpurifier.org",
-                    "homepage": "http://ezyang.com",
-                    "role": "Developer"
+                    "homepage": "http://ezyang.com"
                 }
             ],
             "description": "Standards compliant HTML filter written in PHP",

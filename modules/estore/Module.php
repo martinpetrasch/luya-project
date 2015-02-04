@@ -10,4 +10,8 @@ class Module extends \luya\base\Module
     ];
     
     public $moduleLayout = 'moduleLayout';
+    
+    public $assets = [
+        'app\modules\estore\EstoreAsset'
+    ];
 }

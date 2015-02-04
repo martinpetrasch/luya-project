@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path="application"/>
+	<buildpathentry kind="src" path="public_html"/>
 	<buildpathentry kind="src" path="config"/>
 	<buildpathentry kind="src" path="vendor"/>
 	<buildpathentry kind="src" path="views/cms/default"/>

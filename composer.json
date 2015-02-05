@@ -45,7 +45,9 @@
             "luya\\" : "../luya/src/",
             "admin\\" : "../luya/modules/admin",
             "cms\\" : "../luya/modules/cms",
-            "cmsadmin\\" : "../luya/modules/cmsadmin"
+            "cmsadmin\\" : "../luya/modules/cmsadmin",
+            "newsadmin\\" : "../luya/modules/newsadmin",
+            "news\\" : "../luya/modules/news"
         }
     }
 }

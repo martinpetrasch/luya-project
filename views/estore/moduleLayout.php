@@ -1,10 +1,6 @@
-
-<? /* \luya\helpers\Url::to('estore/default/artikel', ['art' => 'ja']); */ ?>
-<?= \luya\helpers\Url::to('estore/default/artikel', ['art' => 'ja', 'nix' => 'nei']);  ?>
-<hr />
-<?= \yii::$app->urlManager->createUrl(['estore/default/artikel', 'art' => 'ja', 'nix' => 'nei']);  ?>
-<hr />
-
+<ul>
+    <li><a href="<?= \luya\helpers\Url::to('estore/default/basket');  ?>">Basekt</a></li>
+</ul>
 estore header
 <ul>
 </ul>

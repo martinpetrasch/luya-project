@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a2a4eb867fcdccf3006cfd5eb8dba91",
+    "hash": "ff89e11cc2c0e7a42f9995d9c0ba398e",
     "packages": [
         {
             "name": "bower-asset/ace-builds",

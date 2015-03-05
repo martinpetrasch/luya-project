@@ -1,33 +1,47 @@
 <?php
+
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
+
 $config = [
     'id' => 'luya-website',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => 'cms', // set the default loaded module
     'modules' => [
-        'luya' => 'luya\Module',
-        'admin' => 'admin\Module',
-        'cms' => 'cms\Module',
-        'cmsadmin' => 'cmsadmin\Module',
-        'estore' => [
-            'class' => 'app\modules\estore\Module',
+        'luya' => [
+            'class' => 'luya\Module',
+            'sendException' => true,
+            'exceptionUrl' => 'http://luya.io/errorapi',
         ],
-
+        'admin' => 'admin\Module',
+        'cms' => [
+            'class' => 'cms\Module',
+            'assets' => [
+                '\\app\\assets\\ProjectAsset'
+            ]
+        ],
+        'cmsadmin' => 'cmsadmin\Module',
+        'estore' => 'app\modules\estore\Module',
+        'newsadmin' => 'newsadmin\Module',
+        'news' => 'news\Module',
+        'account' => 'account\Module',
+        'errorapi' => 'errorapi\Module',
     ],
-    //'bootstrap' => ['debug'],
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=luyaweb',
             'username' => 'root',
             'password' => '',
-        ],
+            'charset' => 'utf8',
+        ]
     ],
 ];
 
 if (YII_ENV_DEV) {
     
-//    $config['bootstrap'][] = 'debug';
-//    $config['modules']['debug'] = 'yii\debug\Module';
+    $config['bootstrap'][] = 'debug';
+    $config['modules']['debug'] = 'yii\debug\Module';
 
 //    $config['bootstrap'][] = 'gii';
 //    $config['modules']['gii'] = 'yii\gii\Module';

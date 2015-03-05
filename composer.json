@@ -20,24 +20,8 @@
         "bower-asset/twig.js" : "0.7.2@stable",
 		"ext-curl" : "*",
         "curl/curl" : "1.2.0"
-        
-    },
-    "config": {
-        "process-timeout": 1800
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "yii\\composer\\Installer::postCreateProject"
-        ]
     },
     "extra": {
-        "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "application/assets": "0777"
-                }
-            ]
-        },
         "asset-installer-paths": {
             "bower-asset-library": "vendor/bower"
         }

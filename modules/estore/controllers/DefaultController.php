@@ -8,8 +8,12 @@ class DefaultController extends \app\modules\estore\base\EstoreController
     
     public function actionIndex()
     {
+        // i18n
+        $i18n = Yii::t('app', 'yes');
+        
         return $this->renderLayout([
-               "content" => $this->renderPartial('_index')  
+            "content" => $this->renderPartial('_index'),
+            "i18n" => $i18n,
         ]);
         
     }

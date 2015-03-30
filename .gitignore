@@ -12,6 +12,7 @@ composer.phar
 
 # project config
 config/local.php
+config/server.php
 runtime/
 public_html/storage
 public_html/assets

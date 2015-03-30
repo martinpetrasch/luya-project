@@ -19,7 +19,9 @@
         "bower-asset/ace-builds" : "1.1.8@stable",
         "bower-asset/twig.js" : "0.7.2@stable",
 		"ext-curl" : "*",
-        "curl/curl" : "1.2.0"
+        "curl/curl" : "1.2.0",
+        "imagine/imagine": "~0.5.0",
+        "phpmailer/phpmailer": "5.2.*@stable"
     },
     "extra": {
         "asset-installer-paths": {

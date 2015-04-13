@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01a0c850afcc65bf3c258d225c218c76",
+    "hash": "86af2decce47c6732c85c525e86aa2a7",
     "packages": [
         {
             "name": "bower-asset/ace-builds",
@@ -83,6 +83,29 @@
             "description": "This directive allows you to use jQuery UI's draggable and droppable plugins with AngularJS."
         },
         {
+            "name": "bower-asset/angular-i18n",
+            "version": "v1.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-i18n.git",
+                "reference": "d15f1f3ae425bdc7d31fcedcffa50519f3f21b15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-i18n/zipball/d15f1f3ae425bdc7d31fcedcffa50519f3f21b15",
+                "reference": "d15f1f3ae425bdc7d31fcedcffa50519f3f21b15",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "components"
+                ]
+            }
+        },
+        {
             "name": "bower-asset/angular-loading-bar",
             "version": "0.7.1",
             "source": {
@@ -121,6 +144,53 @@
                     "example"
                 ]
             }
+        },
+        {
+            "name": "bower-asset/angular-pickadate",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/restorando/angular-pickadate.git",
+                "reference": "e89022cfb5ab7abbb26139b05a62f9147fd8f247"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/restorando/angular-pickadate/zipball/e89022cfb5ab7abbb26139b05a62f9147fd8f247",
+                "reference": "e89022cfb5ab7abbb26139b05a62f9147fd8f247",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "dev-1.x,|1.x"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "src/angular-pickadate.js",
+                    "src/angular-pickadate.css"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "example",
+                    "package.json",
+                    "gulpfile.js",
+                    "karma.conf.js",
+                    "LICENSE"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple and fluid inline datepicker for AngularJS with no extra dependencies",
+            "keywords": [
+                "angular",
+                "angularjs",
+                "date",
+                "datepicker",
+                "pickadate"
+            ]
         },
         {
             "name": "bower-asset/angular-resource",
@@ -1051,11 +1121,13 @@
         "bower-asset/jquery": 0,
         "bower-asset/jquery-ui": 0,
         "bower-asset/angular": 0,
+        "bower-asset/angular-i18n": 0,
         "bower-asset/angular-resource": 0,
         "bower-asset/angular-ui-router": 0,
         "bower-asset/angular-loading-bar": 0,
         "bower-asset/angular-ui-ace": 0,
         "bower-asset/angular-dragdrop": 0,
+        "bower-asset/angular-pickadate": 0,
         "bower-asset/ace-builds": 0,
         "bower-asset/twig.js": 0,
         "phpmailer/phpmailer": 0

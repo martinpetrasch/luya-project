@@ -31,20 +31,20 @@
                         <h4>Depth 1</h4>
                         <ul>
                             <? foreach(Yii::$app->collection->links->findByArguments(['cat' => 'default', 'lang' => $composition->langShortCode, 'parent_nav_id' => $first]) as $item): ?>
-                                <li><a href="<?= $composition->getFull(); ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                                <li><a href="<?= $composition->getFull() . $item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
                             <? endforeach; ?>
                         </ul>
                         SECOND
                         <ul>
                             <? foreach(Yii::$app->collection->links->findByArguments(['cat' => 'default', 'lang' => $composition->langShortCode, 'parent_nav_id' => $second]) as $item): ?>
-                                <li><a href="<?= $composition->getFull(); ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                                <li><a href="<?= $composition->getFull() . $item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
                             <? endforeach; ?>
                             
                         </ul>
                         THIRD
                          <ul>
                             <? foreach(Yii::$app->collection->links->findByArguments(['cat' => 'default', 'lang' => $composition->langShortCode, 'parent_nav_id' => $third]) as $item): ?>
-                                <li><a href="<?= $composition->getFull(); ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
+                                <li><a href="<?= $composition->getFull() . $item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small></li>
                             <? endforeach; ?>
                             
                         </ul>
@@ -53,14 +53,14 @@
                         
                         <ul>
                         <? foreach(Yii::$app->collection->links->findByArguments(['cat' => 'default', 'lang' => $composition->langShortCode, 'parent_nav_id' => 0]) as $item): ?>
-                                <li><a href="<?= $composition->getFull(); ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
+                                <li><a href="<?= $composition->getFull() . $item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
                                     <ul>
                                         <? foreach(Yii::$app->collection->links->findByArguments(['lang' => $composition->langShortCode, 'parent_nav_id' => $item['id']]) as $subItem): ?>
-                                        <li><a href="<?= $composition->getFull(); ?>/<?=$subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
+                                        <li><a href="<?= $composition->getFull() . $subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
                                         
                                         <ul>
                                             <? foreach(Yii::$app->collection->links->findByArguments(['lang' => $composition->langShortCode, 'parent_nav_id' => $subItem['id']]) as $subSubItem): ?>
-                                            <li><a href="<?= $composition->getFull(); ?>/<?=$subSubItem['url'];?>"><?= $subSubItem['title']?></a> <small>(<?= $subSubItem['url'];?>)</small>
+                                            <li><a href="<?= $composition->getFull() . $subSubItem['url'];?>"><?= $subSubItem['title']?></a> <small>(<?= $subSubItem['url'];?>)</small>
                                             <? endforeach; ?>
                                         </ul>
                                         
@@ -98,10 +98,10 @@
 <?php $this->endPage() ?>
 <? /*
 <? foreach(Yii::$app->collection->links->findByArguments(['cat' => 'default', 'lang' => $composition->langShortCode, 'parent_nav_id' => 0]) as $item): ?>
-        <li><a href="<?= $composition->langShortCode; ?>/<?=$item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
+        <li><a href="<?= $composition->langShortCode . $item['url'];?>"><?= $item['title']; ?></a> <small>(<?= $item['url'];?>)</small>
             <ul>
                 <? foreach(Yii::$app->collection->links->findByArguments(['lang' => $composition->langShortCode, 'parent_nav_id' => $item['id']]) as $subItem): ?>
-                <li><a href="<?= $composition->langShortCode; ?>/<?=$subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
+                <li><a href="<?= $composition->langShortCode . $subItem['url'];?>"><?= $subItem['title']?></a> <small>(<?= $subItem['url'];?>)</small>
                 <? endforeach; ?>
             </ul>
         </li>

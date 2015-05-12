@@ -9,6 +9,8 @@
     $second = \luya\helpers\Menu::parentNavIdByCurrentLink($links, 2);
     $third = \luya\helpers\Menu::parentNavIdByCurrentLink($links, 3);
     
+    
+    
 ?>
 <html>
     <head>
@@ -21,7 +23,11 @@
     
     
         <div class="container">
-            <div id="teaser">LUYA</div>
+            <div id="teaser">LUYA
+            
+            <img src="<?= yii::$app->luya->storage->image->filterApply(139, 'medium-thumbnail')->source; ?>" border="0" />
+            
+            </div>
         </div>
         <div class="container">
             <div class="row">

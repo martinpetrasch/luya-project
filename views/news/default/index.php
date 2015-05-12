@@ -1,5 +1,8 @@
 <?php foreach($model::find()->all() as $item): ?>
-    <h1><?= $item->title; ?></h1>
-    <p><?= $item['text']; ?></p>
-    <hr />
+<pre>
+<? foreach($item->tags as $tag): ?>
+    <? print_r($tag->toArray()); ?>
+<? endforeach; ?>
+</pre>
+<p><a href="<?= $item->getDetailUrl(); ?>">News Detail Url</a></p>
 <?php endforeach; ?>

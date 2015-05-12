@@ -3,9 +3,12 @@ namespace app\blocks;
 
 class TheBlock extends \cmsadmin\base\Block
 {
-    public $name = 'ParagraphBlock!';
+    public function name()
+    {
+        return 'Test Project Block';
+    }
     
-    public function jsonFromArray()
+    public function config()
     {
         return [
             'vars' => [
@@ -19,12 +22,12 @@ class TheBlock extends \cmsadmin\base\Block
         ];
     }
     
-    public function getTwigFrontend()
+    public function twigFrontend()
     {
         return '<p>{{ vars.content }}</p><p> {{ vars.parseMarkdown }}</p>';
     }
     
-    public function getTwigAdmin()
+    public function twigAdmin()
     {
         return '<p>{{ vars.content }}</p>';
     }

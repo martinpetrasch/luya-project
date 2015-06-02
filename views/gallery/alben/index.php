@@ -1,5 +1,5 @@
 <table border="1">
-<? foreach($model::find()->all() as $item): ?>
+<? foreach($albenData as $item): ?>
 <tr>
     <td><img src="<?= \yii::$app->luya->storage->image->filterApply($item->cover_image_id, 'medium-thumbnail')->source; ?>" border="0" /></td>
     <td>

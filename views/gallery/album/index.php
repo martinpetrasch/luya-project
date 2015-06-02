@@ -1,3 +1,4 @@
+<div class="well">
 <table border="1">
 <tr>
     <td><img src="<?= \yii::$app->luya->storage->image->filterApply($model->cover_image_id, 'medium-thumbnail')->source; ?>" border="0" /></td>
@@ -18,3 +19,4 @@
     </td>
 </tr>
 </table>
+</div>

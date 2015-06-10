@@ -10,8 +10,6 @@ $config = [
     'modules' => [
         'luya' => [
             'class' => 'luya\Module',
-            'sendException' => true,
-            'exceptionUrl' => 'http://luya.io/errorapi',
         ],
         'admin' => 'admin\Module',
         'cms' => [
